@@ -73,6 +73,7 @@ fn test() {
 }
 ```
 */
+#[deriving(Clone)]
 pub struct ObjectStream<T> {
     stream: T,
 }
