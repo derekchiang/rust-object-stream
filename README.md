@@ -7,6 +7,10 @@ Directly send/receive objects over a `std::io::Stream`, with serialization/deser
 1. Clone this repo.
 2. `rustpkg build object_stream`
 
+To build the docs:
+
+1. `rustdoc src/object_stream/lib.rs`
+
 ## Usage
 
 Here is a complete example:
