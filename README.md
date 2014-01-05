@@ -1,6 +1,6 @@
 # rust-object-stream
 
-Directly send/receive objects over any `std::io::Stream`, with serialization/deserialization taken care of.
+Directly send/receive objects over a `std::io::Stream`, with serialization/deserialization taken care of.
 
 ## Build
 
