@@ -69,3 +69,7 @@ fn test() {
     assert!(s2 == s2_recv);
 }
 ```
+
+## License
+
+MIT.
