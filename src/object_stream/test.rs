@@ -8,13 +8,13 @@ use std::io::net::ip::SocketAddr;
 
 use object_stream::ObjectStream;
 
-#[deriving(Clone, Eq, Encodable, Decodable)]
+#[deriving(Clone, Eq, Encodable, Decodable, ToStr)]
 enum Salution {
     Hello(uint),
     Suppp(Sup)
 }
 
-#[deriving(Clone, Eq, Encodable, Decodable)]
+#[deriving(Clone, Eq, Encodable, Decodable, ToStr)]
 struct Sup {
     id: uint,
     name: ~str,

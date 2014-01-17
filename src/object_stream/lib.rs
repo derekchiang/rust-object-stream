@@ -6,7 +6,7 @@
 
 extern mod extra;
 
-use std::io::{Reader, Writer, Stream, Decorator};
+use std::io::{Reader, Writer, Stream};
 use std::io::mem::{MemWriter, BufReader};
 use extra::serialize::{Encodable, Decodable};
 use extra::json;
@@ -92,7 +92,7 @@ impl<T: Stream> ObjectStream<T> {
         // Encode the object
         let mut encoder = json::Encoder::new(&mut mem_writer as &mut Writer);
         obj.encode(&mut encoder);
-        let bytes = mem_writer.inner();
+        let bytes = mem_writer.unwrap();
 
         // Send the length of the object
         let len = bytes.len();
